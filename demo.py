@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # Copyright (c) 2011 Bastian Venthur
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,7 +41,7 @@ def main():
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False 
+                running = False
             elif event.type == pygame.KEYUP:
                 drone.hover()
             elif event.type == pygame.KEYDOWN:

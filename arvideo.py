@@ -65,7 +65,7 @@ IQUANT_TAB = array.array('B',
      17, 19, 21, 23, 25, 27, 29, 31))
 
 # Used for upscaling the 8x8 b- and r-blocks to 16x16
-SCALE_TAB = array.array('B', 
+SCALE_TAB = array.array('B',
     ( 0,  0,  1,  1,  2,  2,  3,  3,
       0,  0,  1,  1,  2,  2,  3,  3,
       8,  8,  9,  9, 10, 10, 11, 11,
@@ -155,7 +155,7 @@ MB_TO_GOB_MAP = array.array('B',
      216, 217, 218, 219, 220, 221, 222, 223,
      232, 233, 234, 235, 236, 237, 238, 239,
      248, 249, 250, 251, 252, 253, 254, 255])
-MB_ROW_MAP = array.array('B', [i / 16 for i in MB_TO_GOB_MAP])
+MB_ROW_MAP = array.array('B', [int(i / 16) for i in MB_TO_GOB_MAP])
 MB_COL_MAP = array.array('B', [i % 16 for i in MB_TO_GOB_MAP])
 
 # An array of zeros. It is much faster to take the zeros from here than to
